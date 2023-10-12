@@ -1,0 +1,10 @@
+.bingo-container {
+    display: none;
+    grid-template-columns: auto auto;
+}
+
+.picked {
+    background-color: green;
+    color: white;
+}
+
