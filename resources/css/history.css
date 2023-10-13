@@ -5,27 +5,32 @@ table {
     padding: 0;
     width: 100%;
     table-layout: fixed;
-  }
+}
   
-  table caption {
+table caption {
     font-size: 1.5em;
     margin: .5em 0 .75em;
-  }
-  
-  table tr {
+}
+
+table tr {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     padding: .35em;
-  }
-  
-  table th,
-  table td {
+}
+
+table th, table td {
     padding: .625em;
     text-align: center;
-  }
-  
-  table th {
+}
+
+table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
-  }
+}
+
+#go_to_game_anchor {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,6 +1,71 @@
+#start_game_components {
+    width: 100%; 
+    height: 90vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#enter_name_input, #enter_name_btn {
+    border: 1px solid green;
+    color: green;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 15px;
+}
+
+#enter_name_input::placeholder {
+    color: rgba(0, 44, 0, 0.151);
+}
+
+
 .bingo-container {
     display: none;
-    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.bingo-card-container,
+.bingo-pair-list-container {
+    flex: 1;
+    margin: 10px;
+}
+
+.bingo-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bingo_table {
+    background-color: white;
+    border: 1px solid green;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+/* Center the content inside bingo-pair-list-container */
+.bingo-pair-list-container {
+    text-align: center;
+    width: 50%;
+}
+
+.bingo-letters th {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: green;
+}
+
+.bingo-cell-btn {
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    border: 1px solid green;
+    font-size: 50px;
+    color: green;
 }
 
 .picked {
@@ -8,3 +73,35 @@
     color: white;
 }
 
+.bingo-pair-list-container h2 {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0 auto 10px;
+}
+
+.bingo-pair-list {
+    max-height: 500px;
+    overflow: scroll;
+}
+
+#next_turn_btn {
+    width: 90%;
+    border: 1px solid green;
+    color: green;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.bingo-cell-btn:hover, #enter_name_btn:hover, #next_turn_btn:hover {
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
+#go_to_history_anchor {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

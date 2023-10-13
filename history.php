@@ -10,7 +10,6 @@
 </head>
 <html>
     <body>
-        <h1>Bingo Game History</h1>
         <div class='bingo-history-container'>
             <div>
                 <table id='bingo_history_table'>
@@ -28,6 +27,6 @@
                 </table>
             </div>
         </div>
-        <a href='/bingo/main.php'>Play a game!</a>
+        <a id='go_to_game_anchor' href='/bingo/main.php'>Play a game!</a>
     </body>
 </html>

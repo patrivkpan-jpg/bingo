@@ -10,14 +10,19 @@
 </head>
 <html>
     <body>
-        <h1>Bingo Game!</h1>
-        <input id='enter_name_input' type='text' placeholder="Please enter your name..."><button id='enter_name_btn'>Enter</button>
+        <div id='start_game_components'>
+            <div class='enter-name-input-cont'>
+                <input id='enter_name_input' type='text' placeholder="Please enter your name...">
+            </div>
+            <div class='enter-name-btn-cont'>
+                <button id='enter_name_btn'>Enter</button>
+            </div>
+        </div>
         <div class='bingo-container'>
-            <div>
+            <div class='bingo-card-container'>
                 <table id='bingo_table'>
-                    <h2 id='bingo_card_header'>Your bingo card</h2>
                     <tbody>
-                        <tr>
+                        <tr class='bingo-letters'>
                             <th>B</th>
                             <th>I</th>
                             <th>N</th>
@@ -28,13 +33,12 @@
                 </table>
                 <button id='next_turn_btn'>Next Turn!</button>
             </div>
-            <div>
-                <h2>Picked Bingo Pairs!</h2>
+            <div class='bingo-pair-list-container'>
                 <ul class='bingo-pair-list'>
 
                 </ul>
             </div>
         </div>
-        <a href='/bingo/history.php'>Check out the previous games!</a>
+        <a id='go_to_history_anchor' href='/bingo/history.php'>Check out the previous games!</a>
     </body>
 </html>

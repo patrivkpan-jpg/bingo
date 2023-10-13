@@ -51,8 +51,8 @@ $(document).ready(function() {
             main.playerName = main.enterNameInput.val();
             main.enterNameInput.prop('disabled', true);
             $(this).prop('disabled', true);
-            $('#bingo_card_header').text(`${main.playerName}'s bingo card`);
-            $('.bingo-container').css('display', 'grid');
+            $('.bingo-container').css('display', 'flex');
+            $('#start_game_components').css('display', 'none');
         },
     
         generateBingoCard : function () {
