@@ -13,6 +13,8 @@ $(document).ready(function() {
         pickedBingoPairs : [],
 
         numberOfTurns : 0,
+
+        generateBingoPairInterval : '',
     
         init : function () {
             this.bindElements();
@@ -53,6 +55,7 @@ $(document).ready(function() {
             $(this).prop('disabled', true);
             $('.bingo-container').css('display', 'flex');
             $('#start_game_components').css('display', 'none');
+            main.startBingoGame();
         },
     
         generateBingoCard : function () {
@@ -100,6 +103,7 @@ $(document).ready(function() {
                     alert('Contragulations! You won the game!');
                     $('.bingo-cell-btn').prop('disabled', true);
                     this.nextTurnBtn.prop('disabled', true);
+                    clearInterval(this.generateBingoPairInterval);
                     main.resetBingo()
                     main.logHistory()
                     return;
@@ -125,11 +129,16 @@ $(document).ready(function() {
                 url    : this.baseUrl + '/resetBingo.php',
             });
         },
+
+        startBingoGame : function () {
+            main.generateBingoPair();
+            this.generateBingoPairInterval = setInterval(main.generateBingoPair, 5000);
+        },
     
         generateBingoPair : function () {
             $.ajax({
                 method : 'GET',
-                url    : this.baseUrl + '/generateBingoPair.php',
+                url    : main.baseUrl + '/generateBingoPair.php',
             }).done(function (res) {
                 main.pickedBingoPairs = JSON.parse(res);
                 $('.bingo-pair-list').prepend(`<h2>${main.pickedBingoPairs.newBingoPair}</h2>`)
