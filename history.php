@@ -27,6 +27,8 @@
                 </table>
             </div>
         </div>
-        <a id='go_to_game_anchor' href='/bingo/main.php'>Play a game!</a>
+        <div class='footer'>
+            <a id='go_to_game_anchor' href='/bingo/main.php'>Play a game!</a>
+        </div>
     </body>
 </html>

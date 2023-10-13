@@ -100,7 +100,7 @@
     cursor: pointer;
 }
 
-#go_to_history_anchor {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;

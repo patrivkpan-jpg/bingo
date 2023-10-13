@@ -29,7 +29,7 @@ table th {
     text-transform: uppercase;
 }
 
-#go_to_game_anchor {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;

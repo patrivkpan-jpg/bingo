@@ -39,6 +39,8 @@
                 </ul>
             </div>
         </div>
-        <a id='go_to_history_anchor' href='/bingo/history.php'>Check out the previous games!</a>
+        <div class='footer'>
+            <a id='go_to_history_anchor' href='/bingo/history.php'>Check out the previous games!</a>
+        </div>
     </body>
 </html>
