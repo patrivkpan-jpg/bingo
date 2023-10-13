@@ -68,6 +68,15 @@
     color: green;
 }
 
+.disabled:hover {
+    cursor: default!important;
+}
+
+.disabled:not(.picked):hover {
+    color: green!important;
+    background-color: white!important;
+}
+
 .picked {
     background-color: green;
     color: white;

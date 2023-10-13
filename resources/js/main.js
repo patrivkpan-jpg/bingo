@@ -101,8 +101,8 @@ $(document).ready(function() {
             letters.forEach(letter => {
                 if (this.bingoCard.card[letter].length === 0) {
                     alert('Contragulations! You won the game!');
-                    $('.bingo-cell-btn').prop('disabled', true);
-                    this.nextTurnBtn.prop('disabled', true);
+                    $('.bingo-cell-btn').prop('disabled', true).addClass('disabled');
+                    this.nextTurnBtn.prop('disabled', true).addClass('disabled');
                     clearInterval(this.generateBingoPairInterval);
                     main.resetBingo()
                     main.logHistory()
